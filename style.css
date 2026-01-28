@@ -1,0 +1,196 @@
+:root {
+  --gold: #c9a24d;
+  --brown: #3b2f2f;
+  --cream: #f7f2e9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #2a1f1f, #3b2f2f);
+  color: var(--cream);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 420px;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 0.6rem; 
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: var(--cream);
+  margin-top: 0;         
+  margin-bottom: 0.6rem; 
+  letter-spacing: 1px;
+   line-height: 1.25;
+}
+
+
+.tagline span {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(201, 162, 77, 0.35);
+}
+
+.tagline::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+  margin: 0.5rem auto 1.4rem; 
+  border-radius: 2px;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2.6rem; 
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(247, 242, 233, 0.85);
+}
+
+
+.launch-badge {
+  display: inline-block;
+  padding: 0.6rem 1.6rem;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+
+  background: linear-gradient(
+    180deg,
+    rgba(201, 162, 77, 0.15),
+    rgba(201, 162, 77, 0.05)
+  );
+
+  animation: blink 2.2s ease-in-out infinite;
+  box-shadow: 0 0 12px rgba(201, 162, 77, 0.45);
+}
+
+
+.signup-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form input {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.signup-form button {
+  padding: 0.7rem 1rem;
+  background-color: var(--gold);
+  color: #2a1f1f;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.signup-form button:hover {
+  opacity: 0.9;
+}
+.signup-form button:active {
+  transform: scale(0.97);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.socials a {
+  color: var(--gold);
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+.success-message {
+  color: var(--gold);
+  font-size: 0.85rem;
+  margin-top: 0.6rem;
+  display: none;
+}
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .launch-badge {
+    font-size: 1.1rem;
+  }
+
+  .signup-form {
+    flex-direction: column;
+  }
+
+  .signup-form button {
+    width: 100%;
+  }
+
+ .logo {
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  font-size: 2.1rem;
+}
+
+
+}
+
+@media (min-width: 768px) {
+  .launch-badge {
+    font-size: 1.35rem;
+  }
+}
